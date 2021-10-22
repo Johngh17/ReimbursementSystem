@@ -1,0 +1,352 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+/*
+    selectors in css
+
+    element
+    h2 {}
+
+    class
+    .container {}
+
+    id
+    #some-id{}
+
+    pseudo-class
+    ::hover
+
+    pseudo-elements
+    ::after, ::before{}
+
+    attribute
+    [attr=""] {}
+    input[type="text"] {}
+
+    descendant selectors
+    select selector {}
+    section h2 {}
+
+    direct desc selector
+    selector > selector {}
+
+    multi-selector 
+    selector, selector, selector {}
+    h1, h2, h3 {}
+    h1.title, h2, h3#subtitle{}
+
+    sibling selector
+    select + selector {}
+    li + li {}
+*/
+
+:root {
+  --clr-primary: #0077b6;
+  --clr-vis-primary: #0aadff;
+  --clr-vis-warn: #e54f6d;
+  --clr-vis-success: #dbff76;
+}
+
+* { /*This resets things that have different default settings in different browsers*/
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  font-size: 16px;
+  position: relative;
+}
+
+header {
+  background-color: var(--clr-primary);
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  border-bottom: 2px solid #001b29;
+  background-color:cornflowerblue;
+  color:blue;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+  color: #fff;
+}
+
+li + li {
+  margin-left: 1.3em;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 0.5em 1em;
+  width: 100%;
+  background-color: var(--clr-primary);
+}
+
+h1 {
+  background-color:cornflowerblue;
+  color:floralwhite;
+  padding: 5px 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+a {
+  color: floralwhite;
+  text-decoration: none;
+}
+
+input,
+textarea {
+  outline: 0;
+  border: 0;
+  border-color:blue;
+  border-bottom: 1px solid #777;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  width: 25%;
+  justify-content: center;
+}
+
+textarea {
+  resize: none;
+}
+
+td, tr {
+  padding: 5px 10px;
+}
+
+label {
+  padding: 5px 10px;
+}
+
+#loggedUser{
+  text-align: right;
+  vertical-align: top;
+}
+
+.wrong {
+  background: palevioletred;
+}
+
+.radio {
+  position: relative;
+  cursor: pointer;
+}
+
+.radio input {
+  height: 0;
+  transform: scale(0);
+}
+
+.radio .radio-check::before {
+  content: "";
+  position: absolute;
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #777;
+}
+
+.radio input:checked + .radio-check::after {
+  content: "";
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--clr-primary);
+  left: 0.15em;
+  top: 0.15em;
+}
+
+.logo {
+  height: 64px;
+  width: 64px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin: 1em 0.5em;
+  position: relative;
+}
+
+.form-group .full-width {
+  display: inline-block;
+  width: 100%;
+}
+
+.form-group label {
+  position: relative;
+  color: #777;
+  font-size: 0.9em;
+}
+.form-group label span {
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+}
+
+.form-group input[type="text"]:focus + span,
+.form-group textarea:focus + span {
+  transform: translateY(-1.5em);
+  font-size: 0.6em;
+}
+
+.has-content {
+  transform: translateY(-1.5em);
+  font-size: 0.6em;
+  width: 100%;
+}
+
+.employee-action{
+  color:blue;
+  height: 30px;
+}
+
+.input-error {
+  position: relative;
+}
+
+.input-valid {
+  background-color: var(--clr-vis-success);
+}
+
+.has-content.input-error::after {
+  content: "This field is required";
+  font-size: 0.7em;
+  position: absolute;
+  color: var(--clr-vis-warn);
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.col {
+  flex-basis: 100%;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1em;
+}
+
+.col {
+  flex: 1;
+}
+
+._1c {
+  flex: 0.0833;
+}
+
+._2c {
+  flex: 0.1666;
+}
+
+._3c {
+  flex: 0.25;
+}
+
+._4c {
+  flex: 0.3333;
+}
+._5c {
+  flex: 0.4166;
+}
+._6c {
+  flex: 0.5;
+}
+._7c {
+  flex: 0.5833;
+}
+._8c {
+  flex: 0.6666;
+}
+._9c {
+  flex: 0.75;
+}
+._10c {
+  flex: 0.8333;
+}
+._11c {
+  flex: 0.9166;
+}
+._12c {
+  flex: 1;
+}
+
+.btn {
+  padding: 0.5em 1em;
+  font-size: 0.9rem;
+  border: 0;
+  outline: 0;
+}
+
+.btn {
+  color: #fff;
+}
+
+.primary {
+  background-color: var(--clr-vis-primary);
+}
+
+.warn {
+  background-color: var(--clr-vis-warn);
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.toast-wrapper {
+  width: 100%;
+  position: relative;
+  z-index: 10000;
+}
+
+.toast {
+  width: 40ch;
+  min-height: 15ch;
+  position: absolute;
+  margin: 0 auto;
+  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 3px #555;
+  background-color: white;
+  padding: 1em;
+  transition: transform 0.5s;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+.toast.activate {
+  transform: scale(1);
+}

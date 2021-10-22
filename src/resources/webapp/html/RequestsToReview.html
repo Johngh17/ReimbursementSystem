@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Your Requests to Review</h1>
+<nav>
+    <a href="EmployeeHomepageManager.html">Home</a>
+    <a href="UpdateInformationManager.html">Update Info</a>
+    <a href="ReimbursementSubmissionManager.html">Request Reimbursement</a>
+    <a href="MyRequestsManager.html">My Requests</a>
+    <a href="RequestsToReview.html">Requests to Review</a>
+    <a href="index.html">Logout</a>
+</nav>
+
+<div>
+    <form>
+        <label for="pending">Pending</label>
+        <input type="checkbox" id="pending" value="Pending" checked="checked"/>
+        <label for="approved">Approved</label>
+        <input type="checkbox" id="approved" value="Approved"/>
+        <label for="denied">Denied</label>
+        <input type="checkbox" id="denied" value="Denied"/>
+    </form>
+
+    <label for="user">Search by user</label>
+    <input type="text" id="user">
+    <input type="submit" id="searchUser" value="Search"><br>
+
+    <label for="requestID">Request to Resolve</label>
+    <input type="text" id="requestID" required/>
+    <input type="submit" id="Deny" value="Deny">
+    <input type="submit" id="Approve" value="Approve">
+</div>
+</body>
+<script type="text/javascript" src="../RequestsManager.js"></script>
+</html>
