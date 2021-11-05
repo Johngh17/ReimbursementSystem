@@ -58,7 +58,7 @@ public class App
         //Start the server on port 7000
         Javalin javalin = Javalin.create().start(7000);
 
-        //No stupid CORS messages
+        //Proper handling of CORS is not part of project requirements
         javalin._conf.enableCorsForAllOrigins();
 
         //We should be able to serve the html and js if we want to do so
